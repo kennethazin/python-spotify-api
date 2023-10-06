@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Artist Search Results</title>
+    <!-- Add the Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="display-4">Results for Artist: {{ artist_name }}</h1>
+        <ul class="list-group">
+            {% for song in songs %}
+            <li class="list-group-item">
+                {{ song['index'] }}. <a href="{{ song['url'] }}" target="_blank">{{ song['name'] }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Add the Bootstrap JS and jQuery scripts (optional, for Bootstrap features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
