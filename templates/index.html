@@ -4,19 +4,25 @@
     <title>Spotify Artist Search</title>
     <!-- Add the Bootstrap CSS link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Lato:ital,wght@1,900&family=Noto+Sans+Mono&family=Roboto:ital,wght@0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename="styles.css") }}">
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="display-4">Search for an Artist on Spotify</h1>
-        <form method="POST">
-            <div class="form-group">
-                <label for="artist_name">Artist Name:</label>
-                <input type="text" class="form-control" id="artist_name" name="artist_name" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Search</button>
-        </form>
-    </div>
+        <h1>Search for an Artist on Spotify</h1>
+        <div class="container-search">
+            <form method="POST">
+                <div class="form-group ">
+                    <label for="artist_name">Artist Name:</label>
 
+                    <input type="text" class="form-control" id="artist_name" name="artist_name" required>
+                </div>
+                <button type="submit" class="btn btn-dark btn-bl">Submit</button>
+            </form>
+        </div>
+    </div>
     <!-- Add the Bootstrap JS and jQuery scripts (optional, for Bootstrap features) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>

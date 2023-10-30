@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Spotify Artist Search Results</title>
-    <!-- Add the Bootstrap CSS link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+    <head>
+        <title>Spotify Artist Search Results</title>
+        <!-- Add the Bootstrap CSS link -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Lato:ital,wght@1,900&family=Noto+Sans+Mono&family=Roboto:ital,wght@0,700;1,100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename="styles.css") }}">
+    </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="display-4">Results for Artist: {{ artist_name }}</h1>
-        <ul class="list-group">
+    <div class="container mt-5 col-5 mb-2">
+        <h1>Results for Artist:</h1>
+        <h1>{{artist_name}}</h1>
+        <div class="container_results">
+    <ul class="list-group ">
             {% for song in songs %}
             <li class="list-group-item">
                 {{ song['index'] }}. <a href="{{ song['url'] }}" target="_blank">{{ song['name'] }}</a>
@@ -16,7 +22,12 @@
             {% endfor %}
         </ul>
     </div>
+    </div>
+    <div class="center-button">
 
+    <button onclick="location.href='/'" type=button class="btn btn-dark btn-bl" >Search Again</button>
+
+    </div>
     <!-- Add the Bootstrap JS and jQuery scripts (optional, for Bootstrap features) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>

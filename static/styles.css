@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(16, 16, 16);
+    font-family: 'Noto Sans Mono', monospace;
+    font-size: 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 15px;
+    text-align: center;
+}
+
+.container-search {
+    display: flexbox;
+    margin-top: 300px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+label[for=artist_name]
+{
+    font-size: 18px;
+    
+}
+
+button[type=submit]
+{
+    font-size: small;
+}
+
+
+.list-group {
+    color: rgb(30, 30, 30);
+    margin: 10px;
+    margin-top: 20%;
+}
+
+.list-group-item
+{
+    font-size: 15px;
+}
+
+.center-button {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+.center-button button {
+    font-size:small;
+    margin: 10px;
+
+}
