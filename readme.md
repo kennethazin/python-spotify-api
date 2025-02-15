@@ -8,6 +8,8 @@ The app uses the [Spotify API](https://developer.spotify.com/documentation/) in 
 Git clone
 `https://github.com/kennethazin/spotify-python-api.git`
 
+Create `.env` file and add in Spotify Developer API environment variables. See `.env.example`.
+
 Create a virtual environment and activate it
 `python3 -m venv venv` or `python -m venv venv`
 `source venv/bin/actviate`
